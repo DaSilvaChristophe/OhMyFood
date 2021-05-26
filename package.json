@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 - Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "saas": "saas --watch ./main.scss: ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisEmilioSilva/DaSilvaChristophe_3_26052021.git"
+  },
+  "author": "Cris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisEmilioSilva/DaSilvaChristophe_3_26052021/issues"
+  },
+  "homepage": "https://github.com/CrisEmilioSilva/DaSilvaChristophe_3_26052021#readme"
+}
