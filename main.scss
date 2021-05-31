@@ -1,0 +1,84 @@
+@import "./saas/base/font";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$background-color: #F2F2F2;
+$padding: 10px;
+
+@mixin button 
+{
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    font-size: 0.9em;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    width: 75%;
+    padding: $padding + 6px;
+    cursor: pointer;
+}
+
+body
+{
+    font-family: 'robotoregular','Times New Roman', Times, serif;
+    text-align: center;
+    margin: auto;
+}
+
+.header
+{
+    height: 50px;
+
+    &__logo
+    {
+        font-family: 'Shrikhand','Times New Roman', Times, serif;
+        text-align: center;
+    }
+}
+
+.top-main
+{
+    background-color: $background-color;
+    height: 300px;
+    
+    &__form
+    {
+        background-color: darken($background-color, 5);
+        padding: $padding + 3px;
+        border-top: 3px solid darken($color: $background-color, $amount: 20);
+        
+        &--input
+        {
+            border: none;
+            background-color: darken($background-color, 5);
+            font-family: 'robotoregular','Times New Roman', Times, serif;
+            font-size: 1em;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            width: 40%;
+        }
+    }
+
+    &__presentation
+
+    {
+        width: 75%;
+        margin: auto;
+        padding-top: $padding + 10px;
+        padding-bottom: $padding + 20px;
+
+        &--text
+        {
+            margin: 10px 0;
+        }
+
+        &--button
+        {
+            @include button;
+            position: relative;
+            top: 20px;
+        }
+    }
+}

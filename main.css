@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("fonts/shrikhand/Shrikhand-Regular.eot");
+  src: url("fonts/shrikhand/Shrikhand-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/shrikhand/Shrikhand-Regular.woff2") format("woff2"), url("fonts/shrikhand/Shrikhand-Regular.woff") format("woff"), url("fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype"), url("fonts/shrikhand/Shrikhand-Regular.svg#Shrikhand-Regular") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url("fonts/roboto/Roboto-Regular-webfont.eot");
+  src: url("fonts/roboto/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Regular-webfont.woff2") format("woff2"), url("fonts/roboto/Roboto-Regular-webfont.woff") format("woff"), url("fonts/roboto/Roboto-Regular-webfont.ttf") format("truetype"), url("fonts/roboto/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'robotoregular','Times New Roman', Times, serif;
+  text-align: center;
+  margin: auto;
+}
+
+.header {
+  height: 50px;
+}
+
+.header__logo {
+  font-family: 'Shrikhand','Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.top-main {
+  background-color: #F2F2F2;
+  height: 300px;
+}
+
+.top-main__form {
+  background-color: #e5e5e5;
+  padding: 13px;
+  border-top: 3px solid #bfbfbf;
+}
+
+.top-main__form--input {
+  border: none;
+  background-color: #e5e5e5;
+  font-family: 'robotoregular','Times New Roman', Times, serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  width: 40%;
+}
+
+.top-main__presentation {
+  width: 75%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.top-main__presentation--text {
+  margin: 10px 0;
+}
+
+.top-main__presentation--button {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  font-size: 0.9em;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  text-decoration: none;
+  width: 75%;
+  padding: 16px;
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -2,25 +2,25 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=375, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="max-device-width=375, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
         <script src="https://kit.fontawesome.com/37df7d6d3d.js" crossorigin="anonymous"></script>
         <title>Ohmyfood</title>
     </head>
     <body>
-        <header>
-            <h1>Ohmyfood</h1>
+        <header class="header">
+            <h1 class="header__logo">Ohmyfood</h1>
         </header>
         <main>
-            <section>
-                <form method="post" action="traitementfictif.php">
-                    <input type="text" name="ville" value="Paris,Belleville">
+            <section class="top-main">
+                <form method="post" action="traitementfictif.php" class="top-main__form">
                     <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" name="position" value="Paris, Belleville" class="top-main__form--input" disabled>
                 </form>
-                <article>
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
-                    <button> Explorer nos restaurants</button>
+                <article class="top-main__presentation">
+                    <h2 class="top-main__presentation--text">Réservez le menu qui vous convient</h2>
+                    <p class="top-main__presentation--text">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                    <a class="top-main__presentation--button" href="#restaurants">Explorer nos restaurants</a>
                 </article>
             </section>
             <section>
@@ -42,24 +42,24 @@
                 </div>
             </section>
             <section>
-                <h2>Restaurants</h2> <!-- Img a redimensionnés mobile --> <!-- Intégré animations coeur & nouveau -->
+                <h2 id="restaurants">Restaurants</h2> <!-- Img a redimensionnés mobile --> <!-- Intégré animations coeur & nouveau -->
                 <article>
-                    <img src="img/La palette du goût.jpg" alt="La palette du goût">
+                    <img src="../la_palette_du_gout.jpg" alt="La palette du goût">
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
                 </article>
                 <article>
-                    <img src="img/La note enchantée.jpg" alt="La note enchantée">
+                    <img src="img/la_note_enchantee.jpg" alt="La note enchantée">
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
                 </article>
                 <article>
-                    <img src="img/À la française.jpg" alt="À la française">
+                    <img src="img/a_la_française.jpg" alt="À la française">
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
                 </article>
                 <article>
-                    <img src="img/Le délice des sens.jpg" alt="Le délice des sens">
+                    <img src="img/le_delice_des_sens.jpg" alt="Le délice des sens">
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                 </article>
