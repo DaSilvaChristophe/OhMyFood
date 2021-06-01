@@ -19,64 +19,72 @@
                 </form>
                 <article class="top-main__presentation">
                     <h2 class="top-main__presentation--text">Réservez le menu qui vous convient</h2>
-                    <p class="top-main__presentation--text">Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
+                    <p class="top-main__presentation--text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                     <a class="top-main__presentation--button" href="#restaurants">Explorer nos restaurants</a>
                 </article>
             </section>
-            <section>
-                <h2>Fonctionnement</h2>
-                <div>
-                    <span>1</span>
+            <section class="operation-main">
+                <h2 class="operation-main__title">Fonctionnement</h2>
+                <div class="operation-main__step">
+                    <span class="operation-main__step--number">1</span>
                     <i class="fas fa-mobile-alt"></i>
-                    <p>Choisissez un restaurant</p>
+                    <p class="operation-main__step--text">Choisissez un restaurant</p>
                 </div>
-                <div>
-                    <span>2</span>
+                <div class="operation-main__step">
+                    <span class="operation-main__step--number">2</span>
                     <i class="fas fa-list-ul"></i>
-                    <p>Composez votre menu</p>
+                    <p class="operation-main__step--text">Composez votre menu</p>
                 </div>
-                <div>
-                    <span>3</span>
+                <div class="operation-main__step">
+                    <span class="operation-main__step--number">3</span>
                     <i class="fas fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                    <p class="operation-main__step--text">Dégustez au restaurant</p>
                 </div>
             </section>
-            <section>
-                <h2 id="restaurants">Restaurants</h2> <!-- Img a redimensionnés mobile --> <!-- Intégré animations coeur & nouveau -->
-                <article>
-                    <img src="../la_palette_du_gout.jpg" alt="La palette du goût">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
+            <section class="restaurants-main">
+                <h2 id="restaurants" class="restaurants-main__title">Restaurants</h2> <!-- Intégré animations coeur & nouveau -->
+                <a href="la_palette_du_gout.html" class="restaurants-main__article-lien">
+                <article class="restaurants-main__article">
+                    <img src="img/la_palette_du_gout.jpg" alt="La palette du goût" class="restaurants-main__article--img">
+                    <h3 class="restaurants-main__article--text" >La palette du goût</h3>
+                    <p class="restaurants-main__article--text" >Ménilmontant</p>
                 </article>
-                <article>
-                    <img src="img/la_note_enchantee.jpg" alt="La note enchantée">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
+                </a>
+                <a href="la_note_enchantee.html" class="restaurants-main__article-lien">
+                <article class="restaurants-main__article">
+                    <img src="img/la_note_enchantee.jpg" alt="La note enchantée" class="restaurants-main__article--img">
+                    <h3 class="restaurants-main__article--text">La note enchantée</h3>
+                    <p class="restaurants-main__article--text">Charonne</p>
                 </article>
-                <article>
-                    <img src="img/a_la_française.jpg" alt="À la française">
-                    <h3>À la française</h3>
-                    <p>Cité Rouge</p>
+                </a>
+                <a href="a_la_française.html" class="restaurants-main__article-lien">
+                <article class="restaurants-main__article">
+                    <img src="img/a_la_française.jpg" alt="À la française" class="restaurants-main__article--img">
+                    <h3 class="restaurants-main__article--text">À la française</h3>
+                    <p class="restaurants-main__article--text">Cité Rouge</p>
                 </article>
-                <article>
-                    <img src="img/le_delice_des_sens.jpg" alt="Le délice des sens">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
+                </a>
+                <a href="le_delice_des_sens.html" class="restaurants-main__article-lien">
+                <article class="restaurants-main__article">
+                    <img src="img/le_delice_des_sens.jpg" alt="Le délice des sens"class="restaurants-main__article--img" >
+                    <h3 class="restaurants-main__article--text">Le délice des sens</h3>
+                    <p class="restaurants-main__article--text">Folie-Méricourt</p>
                 </article>
+                </a>
             </section>
         </main>
-        <footer>
-            <p><strong>Ohmyfood</strong></p>
+        <footer class="footer">
+            <p class="footer__logo">Ohmyfood</p>
             <div>
                 <i class="fas fa-utensils"></i>
-                <a href="#">Proposer un restaurant</a>
+                <a href="#" class="footer__lien">Proposer un restaurant</a>
             </div>
             <div>
                 <i class="fas fa-hands-helping"></i>
-                <a href="#">Devenir partenaire</a>
+                <a href="#" class="footer__lien">Devenir partenaire</a>
             </div>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:#">Contact</a>
+            <a href="#" class="footer__lien">Mentions légales</a>
+            <a href="mailto:#" class="footer__lien">Contact</a>
         </footer>
     </body>
 </html>

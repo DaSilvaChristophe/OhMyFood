@@ -1,29 +1,13 @@
-@import "./saas/base/font";
+@import "./saas/base/fonts";
+@import "./saas/utils/variables";
+@import "./saas/utils/mixins";
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$background-color: #F2F2F2;
-$padding: 10px;
-
-@mixin button 
-{
-    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-    font-size: 0.9em;
-    color: white;
-    border-radius: 30px;
-    border: none;
-    text-decoration: none;
-    width: 75%;
-    padding: $padding + 6px;
-    cursor: pointer;
-}
 
 body
 {
+    margin: auto;
     font-family: 'robotoregular','Times New Roman', Times, serif;
     text-align: center;
-    margin: auto;
 }
 
 .header
@@ -33,14 +17,13 @@ body
     &__logo
     {
         font-family: 'Shrikhand','Times New Roman', Times, serif;
-        text-align: center;
     }
 }
 
 .top-main
 {
     background-color: $background-color;
-    height: 300px;
+    height: 320px;
     
     &__form
     {
@@ -55,7 +38,6 @@ body
             font-family: 'robotoregular','Times New Roman', Times, serif;
             font-size: 1em;
             font-weight: bold;
-            color: black;
             text-align: center;
             width: 40%;
         }
@@ -66,8 +48,7 @@ body
     {
         width: 75%;
         margin: auto;
-        padding-top: $padding + 10px;
-        padding-bottom: $padding + 20px;
+        padding: $padding + 10px;
 
         &--text
         {
@@ -78,7 +59,106 @@ body
         {
             @include button;
             position: relative;
-            top: 20px;
+            top: 35px;
         }
+    }
+}
+
+.operation-main
+{
+    &__title
+    {
+        @include title-section-accueil;
+    }
+
+    &__step
+    {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        height: 65px;
+        margin: 15px auto;
+        background-color: $background-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        &--number
+        {
+            @include operation-step-number;
+        }
+        
+        &--text
+        {
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .fa-store
+        {
+            color: $color-primary;
+        }
+    }
+}
+
+.restaurants-main
+{
+    &__title
+    {
+        @include title-section-accueil;
+    }
+
+    &__article-lien
+    {
+        text-decoration: none;
+        color: black;
+    }
+
+    &__article
+    {
+        @include article-restaurants-accueil;
+
+        &--img 
+        {
+            @include img-restaurants-acueil;
+        }
+
+        &--text
+        {
+            @include txt-restaurants-accueil;
+        }
+    }
+}
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 42, 42);
+    color: $color-white;
+    text-align: left;
+    line-height: 1.7em;
+    padding: 10px 0 25px 15px;
+    
+    &__logo
+    {
+        font-family: 'Shrikhand','Times New Roman', Times, serif;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+    
+    &__lien
+    {
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    .fa-utensils
+    {
+        margin-right: 10px;
+    }
+
+    .fa-hands-helping
+    {
+        margin-right: 3px;
     }
 }
