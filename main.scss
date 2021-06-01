@@ -5,6 +5,7 @@
 
 body
 {
+    width: 100%;
     margin: auto;
     font-family: 'robotoregular','Times New Roman', Times, serif;
     text-align: center;
@@ -13,10 +14,24 @@ body
 .header
 {
     height: 50px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
     &__logo
     {
         font-family: 'Shrikhand','Times New Roman', Times, serif;
+        width: 50%;
+    }
+
+    &__icon-return
+    {
+        text-decoration: none;
+        color: $color-black;
+        width: 5%;
+        position: relative;
+        right: 60px;
     }
 }
 
@@ -68,7 +83,7 @@ body
 {
     &__title
     {
-        @include title-section-accueil;
+        @include title;
     }
 
     &__step
@@ -104,13 +119,13 @@ body
 {
     &__title
     {
-        @include title-section-accueil;
+        @include title;
     }
 
     &__article-lien
     {
         text-decoration: none;
-        color: black;
+        color: $color-black;
     }
 
     &__article
@@ -129,6 +144,77 @@ body
     }
 }
 
+.menu
+{
+    background: $background-color;
+    height: 1250px;
+    
+    &__img
+    {
+        object-fit: cover;
+        width: 100%;
+    }
+    &__card
+    {
+        background: $background-color;
+        border: 1px solid $background-color;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        bottom: 50px;
+
+        &--title
+        {
+            font-family: 'Shrikhand','Times New Roman', Times, serif;
+            @include alignleft-pad20;
+        }
+
+        &--choice
+        {
+            @include block-choice-card;
+        }
+
+        &--choice-title
+        {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0;
+            @include alignleft-pad20;
+        }
+
+        &--choice-paragraphe
+        {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            @include alignleft-pad20;
+        }
+
+        h3 
+        {
+            @include alignleft-pad20;
+        }
+        
+        span
+        {
+            margin-right: 20px;
+            font-weight: bold;
+        }
+    }
+
+    &__bottom
+    {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &--button 
+        {
+            @include button;
+            width: 40%;
+        }
+    }
+}
 .footer
 {
     display: flex;
