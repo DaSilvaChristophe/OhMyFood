@@ -3,82 +3,84 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=375, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="main.css">
         <script src="https://kit.fontawesome.com/37df7d6d3d.js" crossorigin="anonymous"></script>
         <title>Ohmyfood</title>
     </head>
     <body>
-        <header>
-            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-            <h1>Ohmyfood</h1>
+        <header class="header">
+            <a href="index.html" class="header__icon-return"><i class="fas fa-arrow-left"></i></a>
+            <h1 class="header__logo">Ohmyfood</h1>
         </header>
         <main>
-            <section>
-                <img src="img/a_la_française.jpg" alt="À la française">
-                <article>
-                    <h2>À la française</h2>
+            <section class="menu">
+                <img src="img/le_delice_des_sens.jpg" alt="Le Délice des sens" class="menu__img">
+                <article class="menu__card">
+                    <h2 class="menu__card--title">Le Délice des sens</h2>
                     <!-- Intégré animation coeur-->
                     <div>
                         <h3>Entrées</h3>
-                        <div>
-                            <p>Tartare de thon</p>
-                            <p>Assaisonné au yuzu<span>25€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Tartare de thon</p>
+                            <p class="menu__card--choice-paragraph">Assaisonné au yuzu<span>25€</span></p>
                         </div>
-                        <div>
-                            <p>Bouchée de homard croustillant</p>
-                            <p>Et sa farandole de petits légumes<span>35€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Bouchée de homard croustillant</p>
+                            <p class="menu__card--choice-paragraph">Et sa farandole de petits légumes<span>35€</span></p>
                         </div>
-                        <div>
-                            <p>Velouté de cèpes</p>
-                            <p>Aux truffes<span>20€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Velouté de cèpes</p>
+                            <p class="menu__card--choice-paragraph">Aux truffes<span>20€</span></p>
                         </div>
                     </div>
                     <div>
                         <h3>Plats</h3>
-                        <div>
-                            <p>Poulet rôti aux herbes de Provence</p>
-                            <p>Et sa crème de truffe<span>40€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Poulet rôti aux herbes de Provence</p>
+                            <p class="menu__card--choice-paragraph">Et sa crème de truffe<span>40€</span></p>
                         </div>
-                        <div>
-                            <p>Langouste rôtie</p>
-                            <p>Et ses légumes de saison<span>35€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Langouste rôtie</p>
+                            <p class="menu__card--choice-paragraph">Et ses légumes de saison<span>35€</span></p>
                         </div>
-                        <div>
-                            <p>Côte de boeuf Angus</p>
-                            <p>Et sa purée de panais<span>44€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Côte de boeuf Angus</p>
+                            <p class="menu__card--choice-paragraph">Et sa purée de panais<span>44€</span></p>
                         </div>
                     </div>
                     <div>
                         <h3>Désserts</h3>
-                        <div>
-                            <p>Farandole de desserts</p>
-                            <p>Du chef<span>18€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Farandole de desserts</p>
+                            <p class="menu__card--choice-paragraph">Du chef<span>18€</span></p>
                         </div>
-                        <div>
-                            <p>Crème brulée </p>
-                            <p>Revisitée<span>22€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Crème brulée </p>
+                            <p class="menu__card--choice-paragraph">Revisitée<span>22€</span></p>
                         </div>
-                        <div>
-                            <p>Tiramisu </p>
-                            <p>À la noisette<span>23€</span></p>
+                        <div class="menu__card--choice">
+                            <p class="menu__card--choice-title">Tiramisu </p>
+                            <p class="menu__card--choice-paragraph">À la noisette<span>23€</span></p>
                         </div>
                     </div>
-                    <button> Explorer nos restaurants</button>
+                    <div class="menu__bottom">
+                        <a class="menu__bottom--button" href="#">Commander</a>
+                    </div>
                 </article>
             </section>
         </main>
-        <footer>
-            <p><strong>Ohmyfood</strong></p>
+        <footer class="footer">
+            <p class="footer__logo">Ohmyfood</p>
             <div>
                 <i class="fas fa-utensils"></i>
-                <a href="#">Proposer un restaurant</a>
+                <a href="#" class="footer__lien">Proposer un restaurant</a>
             </div>
             <div>
                 <i class="fas fa-hands-helping"></i>
-                <a href="#">Devenir partenaire</a>
+                <a href="#" class="footer__lien">Devenir partenaire</a>
             </div>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:#">Contact</a>
+            <a href="#" class="footer__lien">Mentions légales</a>
+            <a href="mailto:#" class="footer__lien">Contact</a>
         </footer>
     </body>
 </html>

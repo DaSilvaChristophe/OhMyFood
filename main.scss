@@ -43,7 +43,7 @@ body
     &__form
     {
         background-color: darken($background-color, 5);
-        padding: $padding + 3px;
+        padding: 13px;
         border-top: 3px solid darken($color: $background-color, $amount: 20);
         
         &--input
@@ -63,9 +63,14 @@ body
     {
         width: 75%;
         margin: auto;
-        padding: $padding + 10px;
+        padding: 20px;
 
-        &--text
+        &--title
+        {
+            margin: 10px 0;
+        }
+        
+        &--paragraph
         {
             margin: 10px 0;
         }
@@ -81,6 +86,8 @@ body
 
 .operation-main
 {
+    height: 320px;
+    
     &__title
     {
         @include title;
@@ -102,7 +109,7 @@ body
             @include operation-step-number;
         }
         
-        &--text
+        &--paragraph
         {
             margin-left: 20px;
             font-weight: bold;
@@ -117,6 +124,11 @@ body
 
 .restaurants-main
 {
+    background: $background-color;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+
     &__title
     {
         @include title;
@@ -134,10 +146,15 @@ body
 
         &--img 
         {
-            @include img-restaurants-acueil;
+            @include img-restaurants-accueil;
         }
 
-        &--text
+        &--title
+        {
+            @include txt-restaurants-accueil;
+        }
+        
+        &--paragraph
         {
             @include txt-restaurants-accueil;
         }
@@ -147,13 +164,13 @@ body
 .menu
 {
     background: $background-color;
-    height: 1250px;
     
     &__img
     {
         object-fit: cover;
         width: 100%;
     }
+    
     &__card
     {
         background: $background-color;
@@ -161,16 +178,16 @@ body
         border-radius: 20px 20px 0 0;
         position: relative;
         bottom: 50px;
-
+        
         &--title
         {
             font-family: 'Shrikhand','Times New Roman', Times, serif;
-            @include alignleft-pad20;
+            @include align-pad-left;
         }
 
         &--choice
         {
-            @include block-choice-card;
+            @include bloc-choice-card;
         }
 
         &--choice-title
@@ -178,20 +195,21 @@ body
             font-weight: bold;
             font-size: 1.1em;
             margin: 0;
-            @include alignleft-pad20;
+            @include align-pad-left;
         }
 
-        &--choice-paragraphe
+        &--choice-paragraph
         {
             display: flex;
             justify-content: space-between;
             margin: 0;
-            @include alignleft-pad20;
+            @include align-pad-left;
         }
 
         h3 
         {
-            @include alignleft-pad20;
+            @include align-pad-left;
+            text-transform: uppercase;
         }
         
         span

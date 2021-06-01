@@ -4,7 +4,7 @@
   "description": "projet 3 - Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "saas": "saas --watch ./main.scss: ./style.css"
+    "saas": "saas --watch ./main.scss: ./main.css"
   },
   "repository": {
     "type": "git",
