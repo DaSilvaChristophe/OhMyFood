@@ -5,14 +5,15 @@
 
 body
 {
-    width: 100%;
-    margin: auto;
+    margin: 0;
     font-family: 'robotoregular','Times New Roman', Times, serif;
     text-align: center;
+    position: relative;
 }
 
 .header
 {
+    width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -39,6 +40,8 @@ body
 {
     background-color: $background-color;
     height: 320px;
+    width: 100%;
+    position: relative;
     
     &__form
     {
@@ -80,6 +83,13 @@ body
             @include button;
             position: relative;
             top: 35px;
+
+            &:hover
+            {
+                background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+                filter: opacity(0.9);
+                box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+            }   
         }
     }
 }
@@ -87,6 +97,7 @@ body
 .operation-main
 {
     height: 320px;
+    width: 100%;
     
     &__title
     {
@@ -103,6 +114,12 @@ body
         background-color: $background-color;
         border-radius: $border-radius;
         box-shadow: $box-shadow;
+
+        &:hover
+        {
+            background-color: lighten($color: $background-color , $amount: 1);
+            box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+        }
 
         &--number
         {
@@ -128,6 +145,7 @@ body
     height: 1200px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     &__title
     {
@@ -158,12 +176,18 @@ body
         {
             @include txt-restaurants-accueil;
         }
+
+        span 
+        {
+            @include btn-new;
+        }
     }
 }
 
 .menu
 {
     background: $background-color;
+    width: 100%;
     
     &__img
     {
@@ -230,6 +254,13 @@ body
         {
             @include button;
             width: 40%;
+
+            &:hover
+            {
+                background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+                filter: opacity(0.9);
+                box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+            }
         }
     }
 }
@@ -258,11 +289,11 @@ body
 
     .fa-utensils
     {
-        margin-right: 10px;
+        padding-right: 10px;
     }
 
     .fa-hands-helping
     {
-        margin-right: 3px;
+        padding-right: 3px;
     }
 }
