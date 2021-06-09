@@ -1,0 +1,69 @@
+.top-main
+{
+    background-color: $background-color;
+    height: 320px;
+    width: 100%;
+
+    @media (min-width:481px)
+        {
+            display: flex;
+            flex-direction: column;
+            background: $color-white;
+        }
+    
+    &__form
+    {
+        background-color: darken($background-color, 5);
+        padding: 13px 0;
+        border-top: 3px solid darken($color: $background-color, $amount: 20);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @media (min-width:481px)
+        {
+          width: 90%;
+          margin: auto;
+          border-radius: 20px;
+        }
+    
+        &--input
+        {
+            background-color: darken($background-color, 5);
+            font-family: 'robotoregular','Times New Roman', Times, serif;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+    }
+
+    &__presentation
+
+    {
+        width: 75%;
+        margin: auto;
+        padding: 20px;
+        
+        @media (min-width:481px)
+        {
+          background-color: $background-color;
+          border-radius: $border-radius;
+          box-shadow: $box-shadow;
+        }
+
+        &--button
+        {
+            @include button;
+            position: relative;
+            top: 15px;
+        
+            &:hover
+            {
+                background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+                box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+                filter: opacity(0.9);
+            }   
+        }
+    }
+}

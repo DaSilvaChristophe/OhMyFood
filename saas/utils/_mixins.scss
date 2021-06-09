@@ -1,0 +1,96 @@
+@mixin button {
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    color: $color-white;
+    border-radius: $border-radius + 10px;
+    box-shadow: $box-shadow;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 16px;
+}
+
+@mixin title-section {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 15px; 
+}
+
+
+@mixin number-step-operation {
+    background: $color-primary;
+    color: $color-white;
+    border-radius: 15px;
+    padding: 2px 8px;
+    margin-right: 30px;
+    position: relative;
+    right: 10px;
+}
+
+@mixin restaurants-article-home {
+    height: 250px;
+    margin: 10px 20px;
+    background: $color-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+}
+
+@mixin restaurants-img-home {
+    object-fit: cover;
+    width: 100%;
+    height: 68%;
+    border-radius: 20px 20px 0 0;    
+}
+
+@mixin restaurants-txt-home {
+    text-align: left;
+    line-height: 0.5em;
+    padding-left: 10px;
+}
+
+@mixin btn-new {
+    display: block;
+    width: 18%;
+    padding: 5px 13px 5px 10px;
+    position: relative;
+    bottom: 94%;
+    left: 74%;
+    border-radius: 2px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 45);
+    font-weight: bold;
+}
+
+@mixin align-pad-left {
+    text-align: left;
+    padding-left: 15px;
+}
+
+@mixin menu-bloc-choice { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 65px;
+    margin: auto;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;  
+    line-height: 1.7em;
+    margin-bottom: 10px;
+}
+
+@mixin anim-selector-menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    height: 99.9%;
+    padding: 0 20px;
+    border-radius: 0px 20px 20px 0px;
+    background: $color-tertiary;
+    color: $color-white;
+    font-size: 1.8em;
+    transform: rotate(0deg);
+}

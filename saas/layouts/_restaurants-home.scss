@@ -1,0 +1,109 @@
+.restaurants-main
+{
+    background: $background-color;
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    
+    @media (min-width:481px)
+    {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &__title
+    {
+        @include title-section;
+
+        @media (min-width:481px)
+        {
+          text-align: center;
+        }
+    }
+
+    &__article-lien
+    {
+        text-decoration: none;
+        color: $color-black;
+        width: 100%;
+    }
+
+    &__article
+    {
+        @include restaurants-article-home;
+        position: relative;
+        
+        &--img 
+        {
+            @include restaurants-img-home;
+        }
+
+        &--title
+        {
+            @include restaurants-txt-home;
+            
+        }
+        
+        &--paragraph
+        {
+            @include restaurants-txt-home;
+        }
+
+        &--btn-new
+        {
+            @include btn-new;
+        }
+
+        .far.fa-heart
+        {
+            position: absolute;
+            top: 76%;
+            right: 5%;
+            font-size: 1.8em;
+            transform: scale(1);
+
+            &:active 
+            {
+                opacity: 0;
+                transition: all 1s ease-in-out;
+            }
+            
+            &:active + .fas.fa-heart
+            {
+                transform: scale(1);
+                transition: all 3s ease-in-out;
+            }
+
+            @media (min-width:481px)
+            {
+                &:hover
+                {
+                    opacity: 0;
+                    transition: all 1s ease-in-out;
+                }
+                
+                &:hover + .fas.fa-heart
+                {
+                    transform: scale(1);
+                    transition: all 3s ease-in-out;
+                }
+            }
+        }
+
+        .fas.fa-heart
+        {
+            position: absolute;
+            top: 76%;
+            right: 5%;
+            font-size: 1.85em;
+            background: -webkit-linear-gradient(#FF79DA,#9356DC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transform: scale(0);
+        }
+    }
+}

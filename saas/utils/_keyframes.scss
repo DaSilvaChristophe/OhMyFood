@@ -1,0 +1,39 @@
+@keyframes appearance-menu
+{
+    from {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);  
+    }
+}
+
+@keyframes loading-spinner
+{
+    from {
+           opacity: 1;
+           z-index: 3;
+    }
+    to {
+           opacity: 0;
+           z-index: 1;
+           visibility: hidden;
+    }
+}
+
+@keyframes spin-border
+{
+    0% {
+        transform: rotate(0deg);
+        border-top: 3px solid $color-tertiary;
+    }
+    50% {
+        border-bottom: 3px solid $color-tertiary;
+   }
+    100%{
+        transform: rotate(360deg);
+        border: 3px solid $color-tertiary;
+    }
+}
