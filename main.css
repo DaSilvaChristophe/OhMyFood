@@ -441,7 +441,7 @@ body {
   right: 5%;
   font-size: 1.85em;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -710,8 +710,8 @@ body {
     left: 64px;
     bottom: 33px;
     font-size: 0.9em;
-    -webkit-text-decoration: 3px underline #99E2D0;
-            text-decoration: 3px underline #99E2D0;
+    -webkit-text-decoration: underline #99E2D0;
+            text-decoration: underline #99E2D0;
   }
 }
 
