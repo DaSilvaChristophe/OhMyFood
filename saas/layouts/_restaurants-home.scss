@@ -36,22 +36,6 @@
     {
         @include restaurants-article-home;
         position: relative;
-        
-        &--img 
-        {
-            @include restaurants-img-home;
-        }
-
-        &--title
-        {
-            @include restaurants-txt-home;
-            
-        }
-        
-        &--paragraph
-        {
-            @include restaurants-txt-home;
-        }
 
         &--btn-new
         {
@@ -105,5 +89,21 @@
             -webkit-text-fill-color: transparent;
             transform: scale(0);
         }
+    }
+
+    &__article-img 
+    {
+        @include restaurants-img-home;
+    }
+
+    &__article-title
+    {
+        @include restaurants-txt-home;
+            
+    }
+        
+    &__article-paragraph
+    {
+        @include restaurants-txt-home;
     }
 }

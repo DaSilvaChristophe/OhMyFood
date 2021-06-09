@@ -16,16 +16,10 @@
         border-radius: 20px 20px 0 0;
         position: relative;
         bottom: 50px;
-        
-        &--title
-        {
-            @include align-pad-left;
-            font-family: 'Shrikhand','Times New Roman', Times, serif;
 
-            @media (min-width:481px)
-            {                     
-                text-align: center;
-            }
+        &--anim-selector-menu
+        {
+            @include anim-selector-menu;
         }
 
         .far.fa-heart
@@ -78,156 +72,162 @@
             -webkit-text-fill-color: transparent;
             transform: scale(0);
         }
+    }
 
-        &--choice
+    &__card-title
+    {
+        @include align-pad-left;
+        font-family: 'Shrikhand','Times New Roman', Times, serif;
+
+        @media (min-width:481px)
+        {                     
+            text-align: center;
+        }
+    }
+
+    &__card-choice
+    {
+        @include menu-bloc-choice;
+        animation-name: appearance-menu;
+        animation-duration: 4s;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:active .menu__card--choice-price
         {
-            @include menu-bloc-choice;
-            animation-name: appearance-menu;
-            animation-duration: 4s;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
+            transform: translate(-240%);
+            transition: 500ms ease-in-out;
+        }
+            
+        &:active .menu__card--anim-selector-menu
+        {
+            transform: translate(-65px);
+            transition: 500ms ease-in-out;
+        }
+            
+        &:active .fa-check-circle
+        {
+            transform: rotate(360deg);
+            transition: 1000ms ;
+        }
 
-            &:active .menu__card--choice-price
+        &:active .menu__card--choice-paragraph
+        {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 64% ;
+        }
+
+        @media (min-width:481px)
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 94%;
+                
+            &:hover .menu__card--choice-price
             {
                 transform: translate(-240%);
                 transition: 500ms ease-in-out;
             }
-            
-            &:active .menu__card--anim-selector-menu
+                
+            &:hover .menu__card--anim-selector-menu
             {
                 transform: translate(-65px);
                 transition: 500ms ease-in-out;
             }
-            
-            &:active .fa-check-circle
+                
+            &:hover .fa-check-circle
             {
                 transform: rotate(360deg);
                 transition: 1000ms ;
             }
 
-            &:active .menu__card--choice-paragraph
+            &:hover .menu__card--choice-paragraph
             {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 width: 64% ;
             }
-
-            @media (min-width:481px)
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 94%;
-                
-                &:hover .menu__card--choice-price
-                {
-                    transform: translate(-240%);
-                    transition: 500ms ease-in-out;
-                }
-                
-                &:hover .menu__card--anim-selector-menu
-                {
-                    transform: translate(-65px);
-                    transition: 500ms ease-in-out;
-                }
-                
-                &:hover .fa-check-circle
-                {
-                    transform: rotate(360deg);
-                    transition: 1000ms ;
-                }
-
-                &:hover .menu__card--choice-paragraph
-                {
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    width: 64% ;
-                }
-            }
-        }
-
-        &--choice-title
-        {
-            @include align-pad-left;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin: 0;
-        }
-
-        &--choice-paragraph
-        { 
-            @include align-pad-left;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            margin: 0;
-
-            @media (min-width:481px)
-            {                     
-                text-align: center;
-                padding-left: 0;
-            }
-        }
-
-        &--choice-price
-        {
-            font-weight: bold;
-            position: absolute;
-            left: 400px;
-            bottom: 5px;
-
-            @media (min-width:481px)
-            {
-                position: absolute;
-                left: 64px;
-                bottom: 33px;
-                font-size: 0.9em;
-                text-decoration: underline $color-tertiary;
-            }
-        }
-
-        &--anim-selector-menu
-        {
-            @include anim-selector-menu;
-        }
-
-        h3 
-        {
-            @include title-section;
-            text-transform: uppercase;
-            border-bottom: 3px solid $color-tertiary;
-            width: 40px;
-            padding-left: 0;
-            margin-left: 20px;
-        }
-
-        .fa-check-circle
-        {
-            transform: rotate(0deg);
         }
     }
-    
+
+    &__card-choice-title
+    {
+        @include align-pad-left;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin: 0;
+    }
+
+    &__card-choice-paragraph
+    { 
+        @include align-pad-left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0;
+
+        @media (min-width:481px)
+        {                     
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
+    &__card-choice-price
+    {
+        font-weight: bold;
+        position: absolute;
+        left: 400px;
+        bottom: 5px;
+
+        @media (min-width:481px)
+        {
+            position: absolute;
+            left: 64px;
+            bottom: 33px;
+            font-size: 0.9em;
+            text-decoration: underline $color-tertiary;
+        }
+    }
+
+    .fa-check-circle
+    {
+        transform: rotate(0deg);
+    }
+
+    h3 
+    {
+        @include title-section;
+        text-transform: uppercase;
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        padding-left: 0;
+        margin-left: 20px;
+    }
+  
     &__bottom
     {
         height: 150px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        &--button 
-        {
-            @include button;
-            width: 40%;
+    }
 
-            &:hover
-            {
-                background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-                box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
-                filter: opacity(0.9);
-            }
+    &__bottom-button 
+    {
+        @include button;
+        width: 40%;
+
+        &:hover
+        {
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+            filter: opacity(0.9);
         }
     }
 }

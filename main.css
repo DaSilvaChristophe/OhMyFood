@@ -202,7 +202,7 @@ body {
   }
 }
 
-.top-main__presentation--button {
+.top-main__presentation-button {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -217,7 +217,7 @@ body {
   top: 15px;
 }
 
-.top-main__presentation--button:hover {
+.top-main__presentation-button:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-box-shadow: 0px 2px 4px #919191;
@@ -282,7 +282,11 @@ body {
           box-shadow: 0px 2px 4px #919191;
 }
 
-.operation-main__step--number {
+.operation-main__step .fa-store {
+  color: #9356DC;
+}
+
+.operation-main__step-number {
   background: #9356DC;
   color: #FFFFFF;
   border-radius: 15px;
@@ -293,7 +297,7 @@ body {
 }
 
 @media (min-width: 481px) {
-  .operation-main__step--number {
+  .operation-main__step-number {
     position: absolute;
     right: 75%;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
@@ -302,13 +306,9 @@ body {
   }
 }
 
-.operation-main__step--paragraph {
+.operation-main__step-paragraph {
   padding-left: 40px;
   font-weight: bold;
-}
-
-.operation-main__step .fa-store {
-  color: #9356DC;
 }
 
 .restaurants-main {
@@ -366,26 +366,6 @@ body {
   position: relative;
 }
 
-.restaurants-main__article--img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 68%;
-  border-radius: 20px 20px 0 0;
-}
-
-.restaurants-main__article--title {
-  text-align: left;
-  line-height: 0.5em;
-  padding-left: 10px;
-}
-
-.restaurants-main__article--paragraph {
-  text-align: left;
-  line-height: 0.5em;
-  padding-left: 10px;
-}
-
 .restaurants-main__article--btn-new {
   display: block;
   width: 18%;
@@ -441,10 +421,30 @@ body {
   right: 5%;
   font-size: 1.85em;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.restaurants-main__article-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 68%;
+  border-radius: 20px 20px 0 0;
+}
+
+.restaurants-main__article-title {
+  text-align: left;
+  line-height: 0.5em;
+  padding-left: 10px;
+}
+
+.restaurants-main__article-paragraph {
+  text-align: left;
+  line-height: 0.5em;
+  padding-left: 10px;
 }
 
 .footer {
@@ -514,16 +514,26 @@ body {
   bottom: 50px;
 }
 
-.menu__card--title {
-  text-align: left;
-  padding-left: 15px;
-  font-family: 'Shrikhand','Times New Roman', Times, serif;
-}
-
-@media (min-width: 481px) {
-  .menu__card--title {
-    text-align: center;
-  }
+.menu__card--anim-selector-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 100%;
+  height: 99.9%;
+  padding: 0 20px;
+  border-radius: 0px 20px 20px 0px;
+  background: #99E2D0;
+  color: #FFFFFF;
+  font-size: 1.8em;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .menu__card .far.fa-heart {
@@ -577,7 +587,19 @@ body {
           transform: scale(0);
 }
 
-.menu__card--choice {
+.menu__card-title {
+  text-align: left;
+  padding-left: 15px;
+  font-family: 'Shrikhand','Times New Roman', Times, serif;
+}
+
+@media (min-width: 481px) {
+  .menu__card-title {
+    text-align: center;
+  }
+}
+
+.menu__card-choice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -606,28 +628,28 @@ body {
   cursor: pointer;
 }
 
-.menu__card--choice:active .menu__card--choice-price {
+.menu__card-choice:active .menu__card--choice-price {
   -webkit-transform: translate(-240%);
           transform: translate(-240%);
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
 
-.menu__card--choice:active .menu__card--anim-selector-menu {
+.menu__card-choice:active .menu__card--anim-selector-menu {
   -webkit-transform: translate(-65px);
           transform: translate(-65px);
   -webkit-transition: 500ms ease-in-out;
   transition: 500ms ease-in-out;
 }
 
-.menu__card--choice:active .fa-check-circle {
+.menu__card-choice:active .fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: 1000ms;
   transition: 1000ms;
 }
 
-.menu__card--choice:active .menu__card--choice-paragraph {
+.menu__card-choice:active .menu__card--choice-paragraph {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -635,7 +657,7 @@ body {
 }
 
 @media (min-width: 481px) {
-  .menu__card--choice {
+  .menu__card-choice {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -647,25 +669,25 @@ body {
             align-items: center;
     width: 94%;
   }
-  .menu__card--choice:hover .menu__card--choice-price {
+  .menu__card-choice:hover .menu__card--choice-price {
     -webkit-transform: translate(-240%);
             transform: translate(-240%);
     -webkit-transition: 500ms ease-in-out;
     transition: 500ms ease-in-out;
   }
-  .menu__card--choice:hover .menu__card--anim-selector-menu {
+  .menu__card-choice:hover .menu__card--anim-selector-menu {
     -webkit-transform: translate(-65px);
             transform: translate(-65px);
     -webkit-transition: 500ms ease-in-out;
     transition: 500ms ease-in-out;
   }
-  .menu__card--choice:hover .fa-check-circle {
+  .menu__card-choice:hover .fa-check-circle {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     -webkit-transition: 1000ms;
     transition: 1000ms;
   }
-  .menu__card--choice:hover .menu__card--choice-paragraph {
+  .menu__card-choice:hover .menu__card--choice-paragraph {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -673,7 +695,7 @@ body {
   }
 }
 
-.menu__card--choice-title {
+.menu__card-choice-title {
   text-align: left;
   padding-left: 15px;
   font-weight: bold;
@@ -681,7 +703,7 @@ body {
   margin: 0;
 }
 
-.menu__card--choice-paragraph {
+.menu__card-choice-paragraph {
   text-align: left;
   padding-left: 15px;
   text-overflow: ellipsis;
@@ -691,13 +713,13 @@ body {
 }
 
 @media (min-width: 481px) {
-  .menu__card--choice-paragraph {
+  .menu__card-choice-paragraph {
     text-align: center;
     padding-left: 0;
   }
 }
 
-.menu__card--choice-price {
+.menu__card-choice-price {
   font-weight: bold;
   position: absolute;
   left: 400px;
@@ -705,7 +727,7 @@ body {
 }
 
 @media (min-width: 481px) {
-  .menu__card--choice-price {
+  .menu__card-choice-price {
     position: absolute;
     left: 64px;
     bottom: 33px;
@@ -715,29 +737,12 @@ body {
   }
 }
 
-.menu__card--anim-selector-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  left: 100%;
-  height: 99.9%;
-  padding: 0 20px;
-  border-radius: 0px 20px 20px 0px;
-  background: #99E2D0;
-  color: #FFFFFF;
-  font-size: 1.8em;
+.menu .fa-check-circle {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu__card h3 {
+.menu h3 {
   text-align: left;
   padding-left: 20px;
   padding-top: 15px;
@@ -746,11 +751,6 @@ body {
   width: 40px;
   padding-left: 0;
   margin-left: 20px;
-}
-
-.menu__card .fa-check-circle {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
 }
 
 .menu__bottom {
@@ -766,7 +766,7 @@ body {
           align-items: center;
 }
 
-.menu__bottom--button {
+.menu__bottom-button {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -780,7 +780,7 @@ body {
   width: 40%;
 }
 
-.menu__bottom--button:hover {
+.menu__bottom-button:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-box-shadow: 0px 2px 4px #919191;

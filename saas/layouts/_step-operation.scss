@@ -38,29 +38,28 @@
             box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
         }
 
-        &--number
-        {
-            @include number-step-operation;
-
-            @media (min-width:481px)
-            {
-               position: absolute;
-               right: 75%;
-               background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-               color: $color-white;
-            }
-        }
-        
-        &--paragraph
-        {
-            padding-left: 40px;
-            font-weight: bold;
-        }
-
         .fa-store
         {
             color: $color-primary;
         }
+    }
 
+    &__step-number
+    {
+        @include number-step-operation;
+
+        @media (min-width:481px)
+        {
+            position: absolute;
+            right: 75%;
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            color: $color-white;
+        }
+    }
+
+    &__step-paragraph
+    {
+        padding-left: 40px;
+        font-weight: bold;
     }
 }
