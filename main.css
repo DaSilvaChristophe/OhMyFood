@@ -700,7 +700,7 @@ body {
 .menu__card--choice-price {
   font-weight: bold;
   position: absolute;
-  left: 407px;
+  left: 400px;
   bottom: 5px;
 }
 
@@ -709,6 +709,7 @@ body {
     position: absolute;
     left: 64px;
     bottom: 33px;
+    font-size: 0.9em;
     -webkit-text-decoration: 3px underline #99E2D0;
             text-decoration: 3px underline #99E2D0;
   }
