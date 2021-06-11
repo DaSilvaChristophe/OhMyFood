@@ -94,7 +94,7 @@
         overflow: hidden;
         cursor: pointer;
 
-        &:active .menu__card--choice-price
+        &:active .menu__card-choice-price
         {
             transform: translate(-240%);
             transition: 500ms ease-in-out;
@@ -112,7 +112,7 @@
             transition: 1000ms ;
         }
 
-        &:active .menu__card--choice-paragraph
+        &:active .menu__card-choice-paragraph
         {
             overflow: hidden;
             white-space: nowrap;
@@ -127,7 +127,7 @@
             align-items: center;
             width: 94%;
                 
-            &:hover .menu__card--choice-price
+            &:hover .menu__card-choice-price
             {
                 transform: translate(-240%);
                 transition: 500ms ease-in-out;
@@ -145,7 +145,7 @@
                 transition: 1000ms ;
             }
 
-            &:hover .menu__card--choice-paragraph
+            &:hover .menu__card-choice-paragraph
             {
                 overflow: hidden;
                 white-space: nowrap;
@@ -216,18 +216,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    &__bottom-button 
-    {
-        @include button;
-        width: 40%;
-
-        &:hover
-        {
-            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
-            box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
-            filter: opacity(0.9);
-        }
     }
 }

@@ -107,6 +107,55 @@ body {
   width: 100%;
 }
 
+/* Button (Home page) */
+.top-main__presentation-button {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 4px #c4c4c4;
+          box-shadow: 0px 2px 4px #c4c4c4;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 16px;
+  position: relative;
+  top: 15px;
+}
+
+.top-main__presentation-button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 2px 4px #919191;
+          box-shadow: 0px 2px 4px #919191;
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+}
+
+/* Button (Restaurants page) */
+.menu__bottom-button {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 2px 4px #c4c4c4;
+          box-shadow: 0px 2px 4px #c4c4c4;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 16px;
+  width: 40%;
+}
+
+.menu__bottom-button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 2px 4px #919191;
+          box-shadow: 0px 2px 4px #919191;
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+}
+
 .header {
   height: 50px;
   display: -webkit-box;
@@ -200,30 +249,6 @@ body {
     -webkit-box-shadow: 0px 2px 4px #c4c4c4;
             box-shadow: 0px 2px 4px #c4c4c4;
   }
-}
-
-.top-main__presentation-button {
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #FFFFFF;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 2px 4px #c4c4c4;
-          box-shadow: 0px 2px 4px #c4c4c4;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 16px;
-  position: relative;
-  top: 15px;
-}
-
-.top-main__presentation-button:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-box-shadow: 0px 2px 4px #919191;
-          box-shadow: 0px 2px 4px #919191;
-  -webkit-filter: opacity(0.9);
-          filter: opacity(0.9);
 }
 
 .operation-main {
@@ -628,7 +653,7 @@ body {
   cursor: pointer;
 }
 
-.menu__card-choice:active .menu__card--choice-price {
+.menu__card-choice:active .menu__card-choice-price {
   -webkit-transform: translate(-240%);
           transform: translate(-240%);
   -webkit-transition: 500ms ease-in-out;
@@ -649,7 +674,7 @@ body {
   transition: 1000ms;
 }
 
-.menu__card-choice:active .menu__card--choice-paragraph {
+.menu__card-choice:active .menu__card-choice-paragraph {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -669,7 +694,7 @@ body {
             align-items: center;
     width: 94%;
   }
-  .menu__card-choice:hover .menu__card--choice-price {
+  .menu__card-choice:hover .menu__card-choice-price {
     -webkit-transform: translate(-240%);
             transform: translate(-240%);
     -webkit-transition: 500ms ease-in-out;
@@ -687,7 +712,7 @@ body {
     -webkit-transition: 1000ms;
     transition: 1000ms;
   }
-  .menu__card-choice:hover .menu__card--choice-paragraph {
+  .menu__card-choice:hover .menu__card-choice-paragraph {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -764,29 +789,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.menu__bottom-button {
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: #FFFFFF;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 2px 4px #c4c4c4;
-          box-shadow: 0px 2px 4px #c4c4c4;
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 16px;
-  width: 40%;
-}
-
-.menu__bottom-button:hover {
-  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  -webkit-box-shadow: 0px 2px 4px #919191;
-          box-shadow: 0px 2px 4px #919191;
-  -webkit-filter: opacity(0.9);
-          filter: opacity(0.9);
 }
 
 .loading-spinner {
