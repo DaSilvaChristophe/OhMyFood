@@ -12,7 +12,7 @@
     &__card
     {
         background: $background-color;
-        border: 1px solid $background-color;
+        border: 1px solid #f2f2f3;
         border-radius: 20px 20px 0 0;
         position: relative;
         bottom: 50px;
@@ -96,7 +96,7 @@
 
         &:active .menu__card-choice-price
         {
-            transform: translate(-240%);
+            transform: translate(-270%);
             transition: 500ms ease-in-out;
         }
             
@@ -160,6 +160,9 @@
         @include align-pad-left;
         font-weight: bold;
         font-size: 1.1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         margin: 0;
     }
 
@@ -182,8 +185,10 @@
     {
         font-weight: bold;
         position: absolute;
-        left: 400px;
+        left: 315px;
         bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         @media (min-width:481px)
         {

@@ -1,0 +1,30 @@
+/* Button (Home page) */
+
+.top-main__presentation-button
+{
+    @include button;
+    position: relative;
+    top: 15px;
+        
+    &:hover
+    {
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+        opacity: 0.9;
+    }   
+}
+
+/* Button (Restaurants page) */
+
+.menu__bottom-button 
+{
+    @include button;
+    width: 40%;
+
+    &:hover
+    {
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        box-shadow: 0px 2px 4px darken($color: rgb(196, 196, 196), $amount: 20);
+        opacity: 0.9;
+    }
+}

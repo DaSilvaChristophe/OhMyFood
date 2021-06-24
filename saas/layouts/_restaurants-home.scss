@@ -48,7 +48,6 @@
             top: 76%;
             right: 5%;
             font-size: 1.8em;
-            transform: scale(1);
 
             &:active 
             {
@@ -85,6 +84,7 @@
             right: 5%;
             font-size: 1.85em;
             background: -webkit-linear-gradient(#FF79DA,#9356DC);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transform: scale(0);
