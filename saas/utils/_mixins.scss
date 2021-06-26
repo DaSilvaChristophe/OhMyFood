@@ -58,7 +58,9 @@
     background-color: $color-tertiary;
     color: darken($color: $color-tertiary, $amount: 45);
     font-weight: bold;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin align-pad-left {
