@@ -9,10 +9,22 @@
         <title>Ohmyfood</title>
     </head>
     <body>
-        <div class="loading-spinner"> 
-            <span class="loading-spinner--design"></span>
-            <span class="loading-spinner--title">oh my food</span>
+        <section class="section-loader">
+        <div class="section-loader__loader">
+            <span class="section-loader__loader--letter">O</span>
+            <span class="section-loader__loader--letter">h</span>
+            <span class="section-loader__loader--space">0</span>
+            <span class="section-loader__loader--letter">m</span>
+            <span class="section-loader__loader--letter">y</span>
+            <span class="section-loader__loader--space">0</span>
+            <span class="section-loader__loader--letter">F</span>
+            <span class="section-loader__loader--letter">o</span>
+            <span class="section-loader__loader--letter">o</span>
+            <span class="section-loader__loader--letter">d</span>
+            <span class="section-loader__loader--letter">.</span>
+            <span class="section-loader__loader--letter">.</span> 
         </div>
+        </section>
         <header class="header">
             <h1 class="header__logo">Ohmyfood</h1>
         </header>
@@ -25,7 +37,9 @@
                 <div class="top-main__presentation">
                     <h2>Réservez le menu qui vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <div class="top-main__presentation__button"> <!-- Div rajouter pour padding button -->
                     <a class="top-main__presentation-button" href="#restaurants">Explorer nos restaurants</a>
+                    </div>
                 </div>
             </section>
             <section class="operation-main">
@@ -101,5 +115,7 @@
             <a href="#" class="footer__lien">Mentions légales</a>
             <a href="mailto:#" class="footer__lien">Contact</a>
         </footer>
+
+        <script src="./index.js"></script>
     </body>
 </html>

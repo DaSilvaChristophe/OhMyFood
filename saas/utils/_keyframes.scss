@@ -10,19 +10,6 @@
     }
 }
 
-@keyframes loading-spinner
-{
-    from {
-           opacity: 1;
-           z-index: 3;
-    }
-    to {
-           opacity: 0;
-           z-index: 1;
-           visibility: hidden;
-    }
-}
-
 @keyframes spin-border
 {
     0% {
@@ -37,3 +24,30 @@
         border: 3px solid $color-tertiary;
     }
 }
+
+@keyframes load {
+    0%{
+        color: $color-secondary;
+        text-shadow: 0 0 7px $color-secondary;
+    }
+    90%{
+       color: $color-primary;
+       text-shadow: none;
+    } 
+    100%{
+        color: $color-secondary;
+        text-shadow: 0 0 7px $color-secondary;
+   }
+}
+
+@keyframes opacity {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
