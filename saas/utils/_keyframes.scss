@@ -47,7 +47,28 @@
     50% {
       opacity: 0.3;
     }
-    100% {
+    80% {
       opacity: 0;
+    }
+    100% {
+      z-index: -10;
+    }
+  }
+
+  @keyframes clignote {
+    0% {
+      box-shadow: 5px 0 18px $color-tertiary;
+    }
+    25% {
+      box-shadow: 0 0 0px $color-tertiary;
+    }
+    50% {
+      box-shadow: 5px 0 18px $color-tertiary;
+    }
+    75% {
+      box-shadow: 0 0 0px $color-tertiary;
+    }
+    100% {
+      box-shadow: 5px 0 18px $color-tertiary;
     }
   }

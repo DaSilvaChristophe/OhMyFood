@@ -1,18 +1,25 @@
 .restaurants-main
 {
-    background: $background-color;
     width: 100%;
     height: 1200px;
     display: flex;
     flex-direction: column;
+    background: $background-color;
+    border-radius: 20px 20px 0px 0;
     
-    @media (min-width:481px)
+    @media (min-width:481px) and (max-width:991px)
     {
-      display: flex;
-      align-items: center;
       width: 80%;
       margin: auto;
+      display: flex;
+      align-items: center;
       border-radius: 20px 20px 0 0;
+    }
+
+    @media (min-width:992px)
+    {
+      width: 70%;
+      margin: auto;
     }
 
     &__title
@@ -27,9 +34,9 @@
 
     &__article-lien
     {
+        width: 100%;
         text-decoration: none;
         color: $color-black;
-        width: 100%;
     }
 
     &__article
@@ -37,9 +44,17 @@
         @include restaurants-article-home;
         position: relative;
 
+        @media (min-width:769px)
+        {
+            width: 70%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
         &--btn-new
         {
             @include btn-new;
+            animation: clignote 3s infinite;
         }
 
         .far.fa-heart
@@ -48,6 +63,7 @@
             top: 76%;
             right: 5%;
             font-size: 1.8em;
+            z-index: 3;
 
             &:active 
             {

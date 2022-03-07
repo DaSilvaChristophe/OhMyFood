@@ -1,10 +1,13 @@
 /* Button (Home page) */
 
-.top-main__presentation-button
+.top-main__presentation__button {
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.top-main__presentation--button
 {
     @include button;
-    position: relative;
-    top: 15px;
         
     &:hover
     {

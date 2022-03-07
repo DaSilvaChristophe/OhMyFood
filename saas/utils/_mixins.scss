@@ -1,29 +1,28 @@
 @mixin button {
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     color: $color-white;
+    border: none;
     border-radius: $border-radius + 10px;
     box-shadow: $box-shadow;
-    border: none;
     text-decoration: none;
-    cursor: pointer;
     padding: 16px;
+    margin-top: 2px;
+    cursor: pointer;
 }
 
 @mixin title-section {
     text-align: left;
-    padding-left: 20px;
-    padding-top: 15px; 
+    padding-left: 20px; 
 }
 
 
 @mixin number-step-operation {
+    position: relative;
+    right: 10px;
+    padding: 2px 8px;
     background: $color-primary;
     color: $color-white;
     border-radius: 15px;
-    padding: 2px 8px;
-    margin-right: 30px;
-    position: relative;
-    right: 10px;
 }
 
 @mixin restaurants-article-home {
@@ -49,18 +48,18 @@
 
 @mixin btn-new {
     display: block;
-    width: 18%;
-    padding: 5px 13px 5px 10px;
     position: relative;
     bottom: 94%;
     left: 70%;
-    border-radius: 2px;
-    background-color: $color-tertiary;
-    color: darken($color: $color-tertiary, $amount: 45);
-    font-weight: bold;
+    width: 18%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px 13px 5px 10px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 45);
+    font-weight: bold;
+    border-radius: 2px;
 }
 
 @mixin align-pad-left {

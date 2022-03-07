@@ -3,7 +3,6 @@
   flex-direction: column;
 
   &__loader {
-    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -11,7 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+    background: $color-black;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
     text-underline-position: under;
