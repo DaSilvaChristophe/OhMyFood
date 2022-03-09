@@ -219,7 +219,7 @@ body {
 }
 
 /* Button (Restaurants page) */
-.menu__bottom-button {
+.menu__bottom--button {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -234,7 +234,7 @@ body {
   width: 40%;
 }
 
-.menu__bottom-button:hover {
+.menu__bottom--button:hover {
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-box-shadow: 0px 2px 4px #919191;
@@ -405,7 +405,7 @@ body {
   text-decoration: underline;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .operation-main__title {
     text-align: center;
   }
@@ -435,7 +435,7 @@ body {
           box-shadow: 0px 2px 4px #c4c4c4;
 }
 
-@media all and (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .operation-main__step {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -499,9 +499,6 @@ body {
 
 @media (min-width: 769px) {
   .operation-main__step-number {
-    position: relative;
-    right: 120px;
-    top: 10px;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: #FFFFFF;
@@ -513,7 +510,7 @@ body {
   font-weight: bold;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .operation-main__step-paragraph {
     padding-bottom: 10px;
   }
@@ -729,6 +726,15 @@ body {
   padding-right: 3px;
 }
 
+/* INFO - Rajout Css en bas de page */
+.header {
+  background-color: #FFFFFF;
+}
+
+.header__logo {
+  color: #000000;
+}
+
 .menu {
   background: #f2f2f2;
   width: 100%;
@@ -741,11 +747,12 @@ body {
 }
 
 .menu__card {
+  width: 100%;
+  position: relative;
+  bottom: 50px;
   background: #f2f2f2;
   border: 1px solid #f2f2f3;
   border-radius: 20px 20px 0 0;
-  position: relative;
-  bottom: 50px;
 }
 
 .menu__card--anim-selector-menu {
@@ -841,7 +848,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 97%;
+  width: 95%;
   height: 65px;
   margin: auto;
   background-color: #FFFFFF;
@@ -923,11 +930,71 @@ body {
   }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu__card-choice {
+    width: 82%;
+    margin-top: 15px;
+  }
+  .menu__card-choice:hover .menu__card-choice-price {
+    -webkit-transform: translate(-240%);
+            transform: translate(-240%);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  .menu__card-choice:hover .menu__card--anim-selector-menu {
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  .menu__card-choice:hover .fa-check-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: 1000ms;
+    transition: 1000ms;
+  }
+  .menu__card-choice:hover .menu__card-choice-paragraph {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu__card-choice {
+    width: 60%;
+    margin-top: 10px;
+  }
+  .menu__card-choice:hover .menu__card-choice-price {
+    -webkit-transform: translate(-240%);
+            transform: translate(-240%);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  .menu__card-choice:hover .menu__card--anim-selector-menu {
+    -webkit-transform: translate(-65px);
+            transform: translate(-65px);
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  .menu__card-choice:hover .fa-check-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: 1000ms;
+    transition: 1000ms;
+  }
+  .menu__card-choice:hover .menu__card-choice-paragraph {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
 .menu__card-choice-title {
   text-align: left;
   padding-left: 15px;
-  font-weight: bold;
   font-size: 1.1em;
+  font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -945,8 +1012,8 @@ body {
 
 .menu__card-choice-price {
   display: inline-block;
-  font-weight: bold;
   margin-right: 20px;
+  font-weight: bold;
 }
 
 @media (min-width: 481px) {
@@ -965,21 +1032,67 @@ body {
 .menu h3 {
   text-align: left;
   padding-left: 20px;
-  text-transform: uppercase;
-  border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-left: 0;
   margin-left: 20px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid #99E2D0;
+    padding-bottom: 7px;
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu h3 {
+    width: 100%;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 7px;
+    margin-left: 0px;
+  }
 }
 
 .menu__bottom {
-  height: 150px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .menu__bottom--button {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__bottom--button {
+    width: 20%;
+  }
+}
+
+/* RAJOUT */
+/* Rajout div menu heart */
+.displayheart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -993,19 +1106,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-/* Rajout div menu heart */
-.displayheart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .section-loader {

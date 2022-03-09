@@ -1,3 +1,13 @@
+/* INFO - Rajout Css en bas de page */
+
+.header{
+    background-color: $color-white;
+
+    &__logo{
+        color: $color-black;
+    }
+}
+
 .menu
 {
     background: $background-color;
@@ -11,11 +21,12 @@
     
     &__card
     {
+        width: 100%;
+        position: relative;
+        bottom: 50px;
         background: $background-color;
         border: 1px solid #f2f2f3;
         border-radius: 20px 20px 0 0;
-        position: relative;
-        bottom: 50px;
 
         &--anim-selector-menu
         {
@@ -154,13 +165,75 @@
                 text-overflow: ellipsis;
             }
         }
+
+        @media (min-width:481px) and (max-width:768px)
+        {
+            width: 82%;
+            margin-top: 15px;
+                
+            &:hover .menu__card-choice-price
+            {
+                transform: translate(-240%);
+                transition: 500ms ease-in-out;
+            }
+                
+            &:hover .menu__card--anim-selector-menu
+            {
+                transform: translate(-65px);
+                transition: 500ms ease-in-out;
+            }
+                
+            &:hover .fa-check-circle
+            {
+                transform: rotate(360deg);
+                transition: 1000ms ;
+            }
+
+            &:hover .menu__card-choice-paragraph
+            {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+        @media (min-width: 769px)
+        {
+            width: 60%;
+            margin-top: 10px;
+                
+            &:hover .menu__card-choice-price
+            {
+                transform: translate(-240%);
+                transition: 500ms ease-in-out;
+            }
+                
+            &:hover .menu__card--anim-selector-menu
+            {
+                transform: translate(-65px);
+                transition: 500ms ease-in-out;
+            }
+                
+            &:hover .fa-check-circle
+            {
+                transform: rotate(360deg);
+                transition: 1000ms ;
+            }
+
+            &:hover .menu__card-choice-paragraph
+            {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
     }
 
     &__card-choice-title
     {
         @include align-pad-left;
-        font-weight: bold;
         font-size: 1.1em;
+        font-weight: bold;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -179,8 +252,8 @@
     &__card-choice-price
     {
         display: inline-block;
-        font-weight: bold;
         margin-right: 20px;
+        font-weight: bold;
         
         @media (min-width:481px)
         {
@@ -197,29 +270,51 @@
     h3 
     {
         @include title-section;
-        text-transform: uppercase;
-        border-bottom: 3px solid $color-tertiary;
         width: 40px;
         padding-left: 0;
         margin-left: 20px;
+        text-transform: uppercase;
+        border-bottom: 3px solid $color-tertiary;
+
+        @media (min-width:481px) and (max-width:768px)
+        {   width: 100%;
+            text-align: center;
+            border-bottom: 3px solid $color-tertiary;
+            padding-bottom: 7px;
+            margin-left: 0px;
+        }
+
+        @media (min-width:769px) 
+        {   width: 100%;
+            text-align: center;
+            border-bottom: none;
+            padding-bottom: 7px;
+            margin-left: 0px;
+        }
     }
   
     &__bottom
     {
-        height: 150px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &--button{
+            @media (min-width:481px) and (max-width:768px)
+            {                     
+                width: 30%;
+            }
+
+            @media (min-width:768px)
+            {                     
+                width: 20%;
+            }
+        }   
     }
 }
 
-/* Rajout div card price */
-
-.displaycard
-{
-    display: flex;
-    justify-content: space-between;
-}
+/* RAJOUT */
 
 /* Rajout div menu heart */
 
@@ -228,4 +323,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Rajout div card price */
+
+.displaycard
+{
+    display: flex;
+    justify-content: space-between;
 }

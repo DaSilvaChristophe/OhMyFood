@@ -20,7 +20,7 @@
         color: $color-white;
         text-decoration: underline;
         
-        @media (min-width:481px)
+        @media (min-width:481px) and (max-width:768px)
         {
           text-align: center;
         }
@@ -44,7 +44,7 @@
         border-radius: $border-radius;
         box-shadow: $box-shadow;
         
-        @media all and (min-width:481px)
+        @media (min-width:481px) and (max-width:768px)
         {                     
             display: flex;
             flex-direction: column;
@@ -93,9 +93,6 @@
 
         @media (min-width:769px)
         {
-            position: relative;
-            right: 120px;
-            top: 10px;
             background: linear-gradient(to bottom right, $color-secondary, $color-primary);
             color: $color-white;
         }
@@ -106,7 +103,7 @@
         padding-left: 45px;
         font-weight: bold;
 
-        @media (min-width:481px)
+        @media (min-width:481px) and (max-width:768px)
         {
             padding-bottom: 10px;
         }
