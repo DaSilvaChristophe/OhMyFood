@@ -185,9 +185,9 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'robotoregular','Times New Roman', Times, serif;
+  font-family: "robotoregular", "Times New Roman", Times, serif;
   text-align: center;
-  background-image: url("../../img/background.png");
+  background: url("../../img/background.png");
 }
 
 /* Button (Home page) */
